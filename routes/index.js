@@ -16,5 +16,11 @@ router.get('/about', function(req, res, next){
     pageTestScript: '/qa/tests-about.js'
   });
 })
+router.get('/tours/hood-river', function(req, res){
+  res.render('tours/hood-river', { title: 'Meadowlark Travel' });
+});
+router.get('/tours/request-group-rate', function(req, res){
+  res.render('tours/request-group-rate', {title: 'Meadowlark Travel'});
+});
 
 module.exports = router;
