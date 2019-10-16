@@ -10,7 +10,11 @@ router.get('/', function(req, res, next) {
 });
 router.get('/about', function(req, res, next){
   var randomFortune = fortune.getFortune();
-  res.render('about', {fortune: randomFortune});
+  res.render('about', {
+    fortune: randomFortune, 
+    title: 'About Meadowlark',
+    pageTestScript: '/qa/tests-about.js'
+  });
 })
 
 module.exports = router;
