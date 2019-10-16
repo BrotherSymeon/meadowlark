@@ -15,7 +15,7 @@ router.get('/about', function(req, res, next){
     title: 'Meadowlark Travel',
     pageTestScript: '/qa/tests-about.js'
   });
-})
+});
 router.get('/tours/hood-river', function(req, res){
   res.render('tours/hood-river', { title: 'Meadowlark Travel' });
 });

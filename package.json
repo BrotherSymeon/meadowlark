@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "lint": "eslint *.js lib/*.js routes/*.js public/qa/*.js public/javascripts/*.js",
+    "test": "mocha -u tdd -R spec qa/tests*.js public/qa/tests-*.js "
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -12,5 +14,11 @@
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "eslint": "6.5.1",
+    "jshint": "2.10.2",
+    "zombie": "6.1.4"
   }
 }
