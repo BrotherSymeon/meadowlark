@@ -12,7 +12,7 @@ router.get('/about', function(req, res, next){
   var randomFortune = fortune.getFortune();
   res.render('about', {
     fortune: randomFortune, 
-    title: 'About Meadowlark',
+    title: 'Meadowlark Travel',
     pageTestScript: '/qa/tests-about.js'
   });
 })
