@@ -1,6 +1,6 @@
 var express = require('express');
 var fortune = require('../lib/fortune');
-var debug = require('debug')('meadowlark:server');
+//var debug = require('debug')('meadowlark:server');
 
 
 var router = express.Router();
@@ -9,7 +9,6 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function (req, res, next) {
   try {
-    debug("getting index", res.locals.partials.weather)
     res.render('index', { title: 'Meadowlark Travel' });
   } catch (err) {
     console.log(err);

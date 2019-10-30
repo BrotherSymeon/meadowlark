@@ -80,12 +80,6 @@ app.use(function(err, req, res, next) {
   res.render('500');
 });
 
-app.use(function(req, res, next){
-  
-  if(!res.locals.partials) res.locals.partials = {};
-  res.locals = getWeatherData();
-  next();
-});
 
 
 module.exports = app;
